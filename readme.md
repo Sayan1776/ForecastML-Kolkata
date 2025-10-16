@@ -20,92 +20,92 @@ Key Features
 
 Final Output
 
-The script generates an interactive plot showing the 7-day forecast.
+    The script generates an interactive plot showing the 7-day forecast.
 
-(To add your own image, upload a screenshot to a service like Imgur and paste the direct link below.)
+    ![alt text](image.png)
 
 Project Structure
 
-WeatherPredictor/
-├── data/
-│   └── Kolkata_weather_history.csv
-├── models/
-│   ├── model_humidity.joblib
-│   ├── model_max_temp.joblib
-│   └── model_min_temp.joblib
-├── train_models.py
-├── forecast.py
-├── requirements.txt
-├── README.md
-└── .gitignore
-
+    WeatherPredictor/
+    ├── data/
+    │   └── Kolkata_weather_data(2017-2022).csv
+    ├── models/
+    │   ├── model_humidity.joblib
+    │   ├── model_max_temp.joblib
+    │   └── model_min_temp.joblib
+    ├── train_models.py
+    ├── forecast.py
+    ├── requirements.txt
+    ├── README.md
+    ├──  .gitignore
+    └──weather_prediction.ipynb
 
 Setup and Installation
 
-1. Clone the Repository
+    1. Clone the Repository
 
-git clone [https://github.com/your-username/Weather-Forecast-Predictor.git](https://github.com/your-username/Weather-Forecast-Predictor.git)
-cd Weather-Forecast-Predictor
-
-
-2. Create a Virtual Environment
-
-It is highly recommended to use a virtual environment to manage project dependencies.
-
-# Create the virtual environment
-python -m venv venv
-
-# Activate it
-# On Windows
-venv\Scripts\activate
-# On macOS/Linux
-source venv/bin/activate
+        git clone [https://github.com/Sayan1776/ForecastML-Kolkata]
+        cd Weather-Forecast-Predictor
 
 
-3. Install Dependencies
+    2. Create a Virtual Environment
 
-Install all the required Python libraries using the requirements.txt file.
+        It is highly recommended to use a virtual environment to manage project dependencies.
 
-pip install -r requirements.txt
+        # Create the virtual environment
+        python -m venv venv
 
-
-4. Get the Dataset
-
-Download the historical weather data from Kaggle.
-
-Place the kolkata_weather_history.csv file inside the data/ folder.
-
-5. Set Up Your API Key (Crucial)
-
-Create a free account at OpenWeatherMap to get an API key.
-
-Create a file named .env in the root of the project folder.
-
-Add your API key to the .env file like this:
-
-API_KEY="your_actual_api_key_here"
+        # Activate it
+        # On Windows
+        venv\Scripts\activate
+        # On macOS/Linux
+        source venv/bin/activate
 
 
-The .gitignore file is already configured to keep this file private.
+    3. Install Dependencies
+
+        Install all the required Python libraries using the requirements.txt file.
+
+        pip install -r requirements.txt
+
+
+    4. Get the Dataset
+
+        Download the historical weather data from Kaggle.
+
+        Place the kolkata_weather_history.csv file inside the data/ folder.
+
+    5. Set Up Your API Key (Crucial)
+
+        Create a free account at OpenWeatherMap to get an API key.
+
+        Create a file named .env in the root of the project folder.
+
+        Add your API key to the .env file like this:
+
+        API_KEY="your_actual_api_key_here"
+
+
+        The .gitignore file is already configured to keep this file private.
 
 How to Use the Project
 
 The project is split into two main scripts for a professional workflow.
 
-Step 1: Train the Models (Run Once)
+    Step 1: Train the Models (Run Once)
 
-First, you need to run the training script. This will process the historical data, train the three machine learning models, and save them into the models/ folder.
+        First, you need to run the training script. This will process the historical data, train the three machine learning models, and save them into the models/ folder.
 
-python train_models.py
-
-
-This step can be re-run whenever you want to retrain the models on new or different historical data.
-
-Step 2: Get a Live Forecast (Run Anytime)
-
-Once the models are trained and saved, you can run the forecast script anytime you want an up-to-date 7-day forecast. This script is fast because it loads the pre-trained models.
-
-python forecast.py
+        python train_models.py
 
 
-This will fetch live data for Kolkata and generate the interactive forecast plot.
+    This step can be re-run whenever you want to retrain the models on new or different historical data.
+
+    Step 2: Get a Live Forecast (Run Anytime)
+
+        Once the models are trained and saved, you can run the forecast script anytime you want an up-to-date 7-day forecast. This script is fast because it loads the pre-trained models.
+
+        python forecast.py
+
+
+        This will fetch live data for Kolkata and generate the interactive forecast plot.
